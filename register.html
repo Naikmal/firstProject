@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- LINK TO OUR CSS FILE -->
+    <link rel = "stylesheet" href = "css/styles.css">
+    <!-- LINK TO FONTAWESOME CSS FILE -->
+    <link rel = "stylesheet" href = "css/all.css">
+
+    <!-- link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+<!-- link to google fonts END -->
+
+<!-- LINK TO SWIPER.COM CSS FILE START -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<!-- LINK TO SWIPER.COM CSS FILE END -->
+
+</head>
+<body class="light-mode">
+    
+
+
+<main class="main_container">
+    <!-- HEADER SECTION START -->
+
+        <div class="header" >
+            <a href="home.html"><h2>National Library</h2></a>
+            <nav >
+                <a href="books.html">Books</a>
+                <a href="">Articles</a>
+                <a href=""></a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="login-register">
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+            </div>
+            <div class="menu_icon">
+                <i  id = "menu_btn" class="menu fa-solid fa-bars"></i>
+                <i id="remove" class=" remove fa-solid fa-x"></i>
+
+            </div>
+            <!-- <div class="light_dark"></div> -->
+        </div>
+
+        <!-- HEADER SECTION END -->
+
+
+        <section class="login-form register-from">
+            <form id="registration-form" name="registration-form" method="post">
+                <h3>Register</h3>
+                <div class="form-group">
+                    <label for="name">Name</label><br>
+                    <input type="text" name = "name" id="name"><br>
+                    <small id="name-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label><br>
+                    <input type="email" name = "email" id="email"><br>
+                    <small id="email-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="l-password">Password</label><br>
+                    <input type="password" name="R-password" id="R-password"><br>
+                    <small id="password-message"></small>
+                </div>
+                <div class="form-group">
+                    <label for="l-password">Confirm Password</label><br>
+                    <input type="password" name="R-password" id="R-confirm-password"><br>
+                    <small id="confirm-password-message"></small>
+                </div>
+                
+                 <input type="submit" value="Register" name = "R-submit" id="R-submit">
+                   
+                
+               
+            </form>
+            <div class="dont-have-account">
+                <h4>Already have an account</h4>
+                <a href="login.html">Login</a>
+            </div>
+        </section>
+
+
+        <!-- FOOTER SECTION START -->
+
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="about-us">
+                <h4>About Us</h4>
+                <p>National Library is a comprehensive digital library that offers a wide range of free and premium ebooks. Our extensive database comprises books, magazines, and other digital documents, giving you access to thousands of literary works.</p>
+                <br>
+                <p>Our platform is designed to enable seamless navigation, search, and discovery of books. You can easily browse our collection by categories, read online, or opt to have the books printed or downloaded onto your device. Our user-friendly interface ensures a hassle-free experience for our patrons.</p>
+                <hr>
+            </div>
+
+            <div class="links">
+                <div class="user-accounts">
+                    <h4>User Accounts</h4>
+                    <a href="">Dashboard</a>
+                    <a href="login.html">Login</a>
+                    <a href="register.html">Register</a>
+                </div>
+                <div class="quick-links">
+                    <h4>Quick Links</h4>
+                    <a href="home.html">Home</a>
+                    <a href="books.html">Books</a>
+                    <a href="articles.html">Articles</a>
+                    <a href="contact.html">Contact Us</a>
+                    
+
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2023 NationaLibrary.com</p>
+    </footer>
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+    <!-- link to js file start  -->
+<script>
+    /* Registeration  form validation */
+
+
+
+let registration_form = document.getElementById('registration-form');
+
+let uName = document.getElementById('name');
+let email = document.getElementById('email');
+let R_password = document.getElementById('R-password');
+let R_confirm_password= document.getElementById('R-confirm-password');
+
+
+
+registration_form.addEventListener('submit', function(event){
+event.preventDefault();
+
+validateForm();
+if(validateForm()){
+    from.submit
+}
+document.write(uName);
+
+
+});
+
+function validateForm(){
+
+// name field validation
+
+if(uName.value == ""){
+    document.getElementById('name-message').innerHTML = "Name field is required";
+}
+else if(uName.value.length < 3){
+    document.getElementById('name-message').innerHTML ="a name must be at least 3 cahracters";
+}
+else if(uName.value.match(/[1-9]/g)){
+    document.getElementById('name-message').innerHTML = "The name field should not contain numeric values";
+}else{
+    document.getElementById('name-message').innerHTML = "";
+}
+
+// Email field vlaidation
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+if(email.value == ""){
+    document.getElementById('email-message').innerHTML = "Email is required";
+}else{
+    document.getElementById('email-message').innerHTML = "";
+}
+/* }else if(emailRegex.test(email)){
+    document.getElementById('email-message').innerHTML = "";
+}else{
+    document.getElementByI('email-message').innerHTML = "In valid email";
+} */
+
+// password field validation
+if(R_password.value == ""){
+    document.getElementById('password-message').innerHTML = "password is required";
+}else if(R_password.value.length < 8 ){
+    document.getElementById('password-message').innerHTML = "password must be at least 8 characters";
+}
+else{
+    document.getElementById('password-message').innerHTML = "";
+}
+
+// confirm password field validation
+
+if(R_confirm_password.value == R_password.value){
+    document.getElementById('confirm-password-message').innerHTML ="";
+}else{
+    document.getElementById('confirm-password-message').innerHTML ="password not matched";
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+</script>
+       
+    <script src="js/main.js"></script>
+
+
+    <!-- link to js file end -->
+</body>
+</html>
+

@@ -1,0 +1,1124 @@
+/* SPECIFYING COLORS FOR DARK AND LIGHT MODESS START*/
+/* :root{
+    --text-color:#333;
+    --background-color:#fff;
+    --black : #222;
+    --main-color: #8e44ad;
+    --white : #ddd;
+    --light-black: #777;
+    --light-white:#ffff;
+    --dark-bg:rgb(0, 0 , 0 , 0.7);
+
+}
+.light-mode
+{
+   color:var(--text-color) ;
+    background-color: var(--background-color);
+}
+.dark-mode
+{
+   color:var(--background-color);
+    background-color: var(--text-color);
+}
+body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+ */
+
+/* SPECIFYING COLORS FOR DARK AND LIGHT MODES  END*/
+
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+main
+{
+    width: 100%;
+   
+}
+
+:root{
+    --black : #222;
+    --main-color: #8e44ad;
+    --white : #ddd;
+    --light-black: #777;
+    --light-white:#ffff;
+    --dark-bg:rgb(0, 0 , 0 , 0.7);
+    --btn-bg-color:#337ab7;
+    --btn-hover-color:#23527c;
+
+}   
+/* HEADER SECTION START */
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--light-white);
+    box-shadow: 2px 2px 5px var(--white);
+  /*  position:relative; 
+    z-index: 1; */
+    position: sticky;
+    top:0;
+}
+.header h2
+{
+    display: inline-block;
+    padding: 1rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    color:var(--black);
+}
+nav{
+   
+    display: inline-block;
+    padding:1rem;
+    margin-left: -4rem;
+
+} 
+/* this the style for elements that are added in js file start */
+
+nav .added_a
+{
+    display: none;
+}
+
+/* this the style for elements that are added in js file end */ 
+.header nav a 
+{
+    margin-right: 1.5rem;
+    color:var(--black);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+.header .login-register
+{
+    padding: 1rem;
+}
+.header .login-register a
+{
+    margin-right: 3rem;
+    color:var(--black);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+/* .header nav a:hover
+{
+    background-color:var(--light-white);
+    color:var(--black);
+    padding: 2rem;
+} */
+ .menu_icon i
+{
+    display: none;
+    color:var(--black);
+    padding:1rem;
+    display: none;
+    margin-right: 1rem;
+    margin-top: 7px;
+} 
+.header .nav{
+    display: block;
+    /* position: absolute;
+    */
+    top:4rem;
+    width: 100%;
+    
+    color:black;
+    text-align:center;
+    background-color: var(--white);
+    transform: translateZ(0);
+    z-index: 3;
+
+}
+.header .nav a
+{
+    color:black;
+    display: block;
+    margin-bottom: 1rem;
+   
+}
+/* HEADER SECTION END */
+
+
+/* HOME PAGE IMAGE SLIDER SECTION START */
+.swiper-button-next:hover,.swiper-button-prev:hover
+{
+    background-color: white;
+    color:black;
+    padding:2rem;
+}
+
+.search-container
+{
+    position: absolute;
+    top:0;
+    left:0 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+   
+  
+}
+.search-box 
+{
+   text-align: center;
+   display: flex;
+   gap:0;
+}
+.search-form input[type = 'search']
+{
+    background-color:var(--light-white);
+    opacity: 0.8;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color:var(--black);
+    border-radius: 5px;
+    outline: none;
+    width: 400px;
+}
+.search-box input::placeholder
+{
+    font-size: 1.3rem;
+}
+.search-form input[type = 'submit']
+{
+    background-color: var(--btn-bg-color);
+    border: none;
+    color: var(--light-white);
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+.search-box input[type="submit"]:hover
+{
+    background-color: var(--btn-hover-color);
+}
+
+/* HOME PAGE IMAGE SLIDER SECTION END*/
+
+
+
+
+/* CATEGORIES SECTION START */
+
+.content-container{
+
+    /* width: 80%; */
+   /*  margin:3rem auto; */
+    padding: 0.5rem;
+   /*  text-align: center; */
+   display: flex;
+   justify-content: space-around;
+}
+.category-container
+{
+    text-align: center;
+     width: 80%; 
+}
+.category-container h2
+{
+    background-color: var(--black);
+    color: var(--light-white);
+    padding: 1.5rem;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+.category-cards
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+ .category-box
+{
+    width: 250px;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 2px 2px 5px var(--light-black);
+    transform: all;
+    transition-duration: 1s;
+}
+.category-box:hover
+{
+    transform: translatey(10px);
+}
+.category-box img
+{
+    width: 100%;
+    height: 180px;
+    border-radius: 5px;
+}
+
+.category-box h3
+{
+    text-align: center;
+    margin-top: 1rem;
+}
+.category-box h3 a
+{
+    text-decoration: none;
+    color: var(--black);
+}
+.category-container .category-cards .category-box
+{
+    display: none;
+}
+.category-container .category-cards .category-box:nth-child(1),
+.category-container .category-cards .category-box:nth-child(2),
+.category-container .category-cards .category-box:nth-child(3),
+.category-container .category-cards .category-box:nth-child(4),
+.category-container .category-cards .category-box:nth-child(5),
+.category-container .category-cards .category-box:nth-child(6)
+{
+    display: inline-block;
+}
+.category-container #category-loadmore-btn
+{
+
+
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    background-color: var(--btn-bg-color);
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+   /*  border-radius: 10px; */
+    margin-bottom: 1rem;
+    
+}
+.category-container #category-loadmore-btn:hover
+{
+    background-color: var(--btn-hover-color);
+}
+
+/* CATEGORIES SECTION END */
+
+
+ /* ARTICLES ASIDE SECTION START */
+
+ .aside-card-container .aside-card
+ {
+    width: 100%;
+    height: 80px;
+    margin-top: 50px;
+ }
+ .aside-card-container
+ {
+    margin: 20px 20px;
+ }
+ .aside-card-container h2
+ {
+    
+    border: 0;
+    outline: 0;
+    display: inline-block;
+    /* margin-left: 6rem; */
+  margin-top: -1rem;
+    padding: 0.8rem;
+    background-color: var(--main-color);
+    letter-spacing: 4px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+ }
+ .aside-card-container .aside-card .aside-content
+ {
+    padding: 5px;
+    box-shadow: 2px 2px 6px var(--light-black);
+    height: 80px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+ }
+ .aside-card-container .aside-card .aside-content h4
+ {
+    margin-bottom: 5px;
+ }
+
+ /* ARTICLES ASIDE SECTION END*/
+
+/* RECENTLY ADDED BOOKS SECTION START */
+.recently-added-books
+{
+    width: 90%;
+    margin:40px auto;
+    text-align: center;
+}
+.recently-added-books h3
+{
+    background-color: var(--black);
+    color:var(--light-white);
+    padding: 1rem;
+    font-size: 2rem;
+   /*  margin-bottom: 2rem; */
+    border-radius: 10px;
+
+}
+.books-container
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem;
+    /* box-shadow: 2px 2px 5px var(--light-black); */
+}
+.books-container .recently-added-books-box 
+{
+    width: 150px;
+    height: 230px;
+/*   margin-left: 1rem;
+    margin-bottom: 1rem; */
+
+}
+.books-container .recently-added-books-box  a img
+{
+    width: 100%;
+    height: 180px;
+    padding: 0.5rem;
+    border-radius: 5px; 
+}
+.books-container .recently-added-books-box a
+{
+    text-decoration: none;
+}
+
+.books-container .recently-added-books-box{
+    display: none;
+}
+.books-container .recently-added-books-box:nth-child(1),
+.books-container .recently-added-books-box:nth-child(2),
+.books-container .recently-added-books-box:nth-child(3),
+.books-container .recently-added-books-box:nth-child(4),
+.books-container .recently-added-books-box:nth-child(5),
+.books-container .recently-added-books-box:nth-child(6),
+.books-container .recently-added-books-box:nth-child(7)
+{
+    display: inline-block;
+}
+
+
+
+.recently-added-books #load-more-books
+{
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    background-color: var(--btn-bg-color);
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+   /*  border-radius: 10px; */
+    margin-bottom: 1rem;
+}
+.recently-added-books #load-more-books:hover
+{
+    background-color: var(--btn-hover-color);
+}
+
+
+
+/* RECENTLY ADDED BOOKS SECTION END */
+
+
+/* FOOTER SECTION START */
+footer
+{
+    background-color: var(--black);
+    margin-bottom: 0;
+    border-top: 1px solid var(--black);
+    color: var(--light-white);
+}
+.footer-content
+{
+    display: flex;
+    justify-content: space-around;
+}
+.footer-content .about-us
+{
+    width: 600px;
+    margin:2rem 0.5rem;
+}
+.footer-content .about-us h4
+{
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.footer-content .about-us p
+{
+    font-size: 18px;
+  
+}
+.footer-content .about-us hr
+{
+    margin-top: 0.5rem;
+}
+
+.footer .links
+{
+    display: flex;
+    justify-content: space-between;
+    margin:2rem 0.5rem;
+    
+}
+.footer .links .user-accounts h4
+{
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.footer .links .user-accounts a
+{
+    display: block;
+    margin-bottom: 0.8rem;
+    text-decoration: none;
+    color:var(--black);
+    font-size: 1.1rem;
+    color:var(--light-white)
+}
+.footer .links .quick-links
+{
+    margin-left: 5rem;
+}
+.footer .links .quick-links h4
+{
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.footer .links .quick-links a
+{
+    display: block;
+    margin-bottom: 0.8rem;
+    text-decoration: none;
+    color:var(--black);
+    font-size: 1.1rem;
+    color:var(--light-white)
+}
+.footer > p
+{
+    text-align: center;
+    /* margin-bottom: 3rem; */
+    padding-bottom: 3rem;
+}
+
+
+/* FOOTER SECTION END */
+
+/*  LOGIN ,REGISTER ,CONTACT FORM  SECTION START  */
+
+.login-form
+{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 2rem;
+    flex-direction: column;
+}
+.login-form form
+{
+    width: 350px;
+    border: 1px solid var(--light-black);
+  /*   padding: 0 1rem; */
+    border-radius: 10px;
+}
+.login-form form h3
+{
+    background-color: var(--main-color);
+    text-align: center;
+    padding: 0.6rem;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.login-form form .form-group
+{
+   margin-top: 2rem;
+   padding: 0 1rem;
+}
+.login-form form .form-group input
+{
+    width: 100%;
+    height: 1.9rem;
+}
+.login-form form .form-group label
+{
+    font-weight: bold;
+}
+.login-form form .form-group small
+{
+    color: red;
+    font-weight: 600;
+}
+
+.login-form form input[type=submit]
+{
+    border: 0;
+    outline: 0;
+    background-color: var(--btn-bg-color);
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 2rem 1rem;
+    /* border-radius: 10px; */
+    width: 5rem;
+    cursor: pointer;
+} 
+.login-form form input[type=submit]:hover
+{
+    background-color: var(--btn-hover-color);
+}
+.login-form form a
+{
+    margin-left: 5rem;
+    font-weight: bold;
+}
+.login-form .dont-have-account
+{
+    margin-top: 3rem;
+    border: 1px solid var(--light-black);
+    width: 350px;
+    border-radius: 10px;
+}
+.login-form .dont-have-account h4
+{
+    background-color: var(--main-color);
+    padding: 0.5rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.login-form .dont-have-account a
+{
+    text-decoration: none;
+    background-color: var(--btn-bg-color);
+    color: black;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: inline-block;
+    margin: 1rem 0.8rem;  
+
+    padding: 0.4rem;
+}
+.contact-us .contact-form 
+{
+    width: 500px;
+}
+.contact-us .contact-form h2
+{
+    padding:0.6rem 0.5rem;
+}
+.contact-us .contact-form p
+{
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.3rem 0.5rem;
+}
+.login-form form .form-group textarea
+{
+    width: 100%;
+    height: 100px;
+}
+.contact-us .contact-form  span
+{
+    font-weight: bold;
+}
+
+/*  LOGIN ,REGISTER,CONTATCT FORM SECTION END */
+
+
+/* BOOKS SECTION START */
+
+
+.books-page
+{
+    width: 90%;
+    margin:40px auto;
+    text-align: center;
+}
+.books-page h2
+{
+    background-color: var(--black);
+    color:var(--light-white);
+    padding: 1rem;
+    font-size: 2rem;
+   /*  margin-bottom: 2rem; */
+    border-radius: 10px;
+
+}
+.books-container
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem;
+    /* box-shadow: 2px 2px 5px var(--light-black); */
+}
+.books-container .books-box 
+{
+    width: 200px;
+    height: 230px;
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+  /*   border: 2px solid black; */
+
+}
+.books-container .books-box .views-date-added
+{
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.books-container .books-box  a img
+{
+    width: 100%;
+    height: 180px;
+  /*   padding: 0.5rem; */
+   /*  border-radius: 5px; */ 
+}
+.books-container .books-box a
+{
+    text-decoration: none;
+}
+
+/* display none the books-page coantiner because of loadmore books button */
+
+.books-page .books-container .books-box
+{
+    display: none;
+}
+.books-page .books-container .books-box:nth-child(1),
+.books-page .books-container .books-box:nth-child(2),
+.books-page .books-container .books-box:nth-child(3),
+.books-page .books-container .books-box:nth-child(4),
+.books-page .books-container .books-box:nth-child(5)
+{
+    display: inline-block;
+}
+.books-page #load-books
+{
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    background-color: var(--btn-bg-color);
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+   /*  border-radius: 10px; */
+    margin-bottom: 1rem;
+}
+.books-page #load-books:hover
+{
+    background-color: var(--btn-hover-color);
+}
+
+/*  BOOKS SECTION END */
+
+/* ARTICLE SECTION START */
+
+
+
+.articles-page 
+{
+
+    width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+}
+.articles-page > h2
+{
+    margin-left: 8rem;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+.search-articles 
+{
+    display: inline-block;
+    border: 2px solid var(--light-black);
+    border-radius: 5px;
+    margin: 1rem auto;
+    height: 100%;
+
+}
+.search-articles .search-box input[type = submit]
+{
+   border-radius: 0;
+}
+.articles-container .article-box
+{
+    width: 80%;
+    height: 250px;
+    padding: 1rem;
+    margin: 0.6rem auto;
+    border: 1.4px solid var(--light-black);
+    border-radius: 5px;
+    
+   
+}
+
+.article-box .article-image img
+{
+    width: 20%;
+    height: 200px;
+    float: left;
+  
+}
+.article-box .article-content
+{
+    float: right;
+    margin-right: 4rem;
+    width: 70%;
+    height: 200px;
+}
+.article-box .article-content h2
+{
+    margin-bottom: 0.5rem;
+}
+.article-box .article-content .author-name
+{
+    margin-bottom: 0.4rem;
+}
+.articles-page .prev-next-article-btn
+{
+    margin-left: 7.8rem;
+    margin-top: 1.5rem;
+}
+.articles-page .prev-next-article-btn button
+{
+    padding: 0.5rem;
+    outline: 0;
+    border: 0;
+    background-color: var(--btn-bg-color);
+    font-size: 1.1em;
+}
+.articles-page .prev-next-article-btn button:hover
+{
+    background-color: var(--btn-hover-color);
+}
+
+
+
+/* ARTICLE SECTION END */
+
+/* BOOK DETAILS PAGE STYELS START */
+.book-page
+{
+    display: flex;
+}
+
+.book-details-container
+{
+    width: 50%;
+    border: 2px solid black;
+    margin: 2rem ;
+    display: flex;
+
+}
+.book-details-container .details
+{
+    margin-left: 5rem;
+}
+.book-details-container .details .book-description
+{
+    margin-top: 0.7rem;
+    margin-bottom: 1rem;
+ 
+} 
+
+.book-details-container .book-image img
+{
+    width: 100px;
+    height: 150px;
+    margin-top: 5px;
+}
+/* .details table
+{
+     border: 2px solid black;
+} */
+
+.details table, tr ,td
+{
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+    width: 400px;
+    height: 15px;
+    
+
+}
+.book-page .related-books h2
+{
+    text-align: center;
+    margin-top: 1rem;
+}
+.book-container
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.book-container .book-box
+{
+    width: 500px;
+    height: 150px;
+    border: 1px solid var(--light-black);
+    display: flex;
+    
+    margin-bottom: 0.7rem;
+}
+.book-container .book-box a img
+{
+    width: 100px;
+    height: 135px;
+    padding: 5px;
+}
+.book-box .views-date-date-added
+{
+    margin-left: 1rem;
+}
+.book-box .views-date-date-added a 
+{
+    display: block;
+    margin-top: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+.book-box .views-date-date-added small{
+    margin-top: 1rem;
+    display: block;
+}
+
+/* BOOK DETAILS PAGE STYELS END */
+
+/* ARTICLE DISPLAY PAGE STYLES START  */
+
+.article-display-page
+{
+    width: 60%;
+    
+    margin: 2rem auto;
+}
+.article-container
+{
+    border: 1px solid var(--black);
+}
+.article-display-page .article-container .article h2,  .article-publish,article
+{
+    padding:1rem
+}
+.article-display-page .article-container .article img
+{
+    width: 100%;
+    height: 500px;
+    margin-bottom: 1rem;
+    
+}
+.article-display-page .article-container .article  h2
+{
+    margin-bottom: 0.5rem;
+
+}
+.article-display-page .article-container .article .article-publish 
+{
+    margin-bottom: 1.5rem;
+}
+
+.article-display-page .article-container .article .article-publish p i
+{
+    /* display: block; */
+    margin-right: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+/* related articles in article page */
+
+
+.article-display-page .related-articles
+{
+   /*  border: 2px solid green; */
+    margin-top: 3rem;
+}
+.article-display-page .related-articles h2
+{
+    margin-bottom: 0.5rem;
+}
+.article-display-page .related-articles .article-card-container
+{
+    display: flex;
+    justify-content: space-between;
+}
+.article-display-page .related-articles .related-article-card
+{
+    width:200px;
+    height: 230px;
+    border: 1px solid var(--light-black);
+}
+.article-display-page .related-articles .related-article-card img
+{
+    width: 100%;
+    margin-bottom: 0.8rem;
+}
+.article-display-page .related-articles .related-article-card a
+{
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.article-display-page .add-and-view-article
+{
+    margin-top: 3rem;
+    border:1px solid var(--light-black) ;
+    padding: 1rem;
+    text-align: center;
+}
+.article-display-page .add-and-view-article a
+{
+    display: inline-block;
+    background-color: var(--btn-bg-color);
+    text-decoration: none;
+    padding: 0.7rem;
+    color: black;
+    font-weight: 700;
+
+
+
+}
+
+
+/* ARTICLE DISPLAY PAGE STYLES END */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION MEDIA QUERIES START */
+
+@media screen and (max-width:870px){
+    .header nav a 
+{
+    margin-right: 1rem;
+}
+}
+
+@media screen and (max-width : 880px) {
+    .header nav {
+        
+        display: none;
+    }
+    
+}
+@media screen and (max-width : 880px) {
+    .header .menu_icon .menu{
+        display: block;
+
+    }
+}
+
+
+@media screen and (max-width:545px){
+    
+    .header .login-register a
+    {
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+}
+@media screen and (max-width:570px){
+    .search-box form
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .search-form input[type = 'submit']{
+        width: 200px;
+        border: 2px solid red;
+        margin:20px auto;
+    }
+}
+
+@media screen and (max-width:1140px){
+    .category-cards{
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width:860px
+)
+{
+    .category-box{
+        width: 500px;
+        border: 2px solid red;
+    }
+}
+
+@media screen and (max-width:730px){
+    .aside-card-container{
+        display: none;
+    }
+}
+@media screen and (max-width:620px)
+{
+    .swiper-button-next:hover,.swiper-button-prev:hover{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:795px){
+    .aside-card-container .aside-card .aside-content
+    {
+        height: 120px;
+    }
+}
+
+/* making footer responsive */
+/* @media screen and (max-width:920px){
+    .footer-content
+    {
+        justify-content: space-between;
+        flex-direction: column;
+       
+    }
+    .footer-content .about-us
+    {
+        padding: 1rem;
+        margin-right: 2rem;
+    }
+    .links
+    {
+        justify-content: space-around;
+    }
+}
+
+ */
+/* SECTION MEDIA QUERIES END */
+
+
+

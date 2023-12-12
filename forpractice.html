@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+  --text-color: #333; /* Default text color in light mode */
+  --background-color: #fff; /* Default background color in light mode */
+}
+
+.light-mode {
+  --text-color: #333; /* Text color in light mode */
+  --background-color: #fff; /* Background color in light mode */
+}
+
+.dark-mode {
+  --text-color: #fff; /* Text color in dark mode */
+  --background-color: #333; /* Background color in dark mode */
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+h1 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: none;
+}
+    </style>
+</head>
+<body class="light-mode">
+     
+        <h1>Website Title</h1>
+        <p>This is some content.</p>
+        <button id="toggleModeBtn">Toggle Mode</button>
+    
+
+
+
+        <script>
+            var toggleModeBtn = document.getElementById('toggleModeBtn');
+var body = document.body;
+
+toggleModeBtn.addEventListener('click', function() {
+  body.classList.toggle('dark-mode');
+});
+        </script>
+</body>
+</html>
